@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="datasubmit">
+        <input type="text" name="email" placeholder="Email" id="email">
+        <input type="text" name="password" placeholder="Password" id="password">
+        <input type="submit" value="submit">
+    <div class="g-recaptcha" data-sitekey="6LcpxPEcAAAAAGJ5O82ZMeyJYpoVNJwry_hNMspr"></div>
+    </form>
+    <script>
+        document.getElementById("datasubmit").addEventListener("submit",SendToserver)
+        function SendToserver(e){
+            e.preventDefault();
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const captcha = document.getElementById("g-recaptcha-response").value;
+
+            fetch("/login",{
+                headers:{
+                    "Content-Type":"application/json",
+                    "Accept":"application/json, text/plain, */*"
+                },
+                method:"POST",
+                body:JSON.stringify({username:email,password:password,captcha:captcha})
+            })
+            .then((res)=>res.json())
+            .then((data)=>{
+                if(data.message == "Ok"){
+                    window.location ="/user"
+                }else{
+                    window.location ="/login"
+                }
+            })
+            .catch(err => console.log(err))
+        }
+    </script>
+</body>
+</html>

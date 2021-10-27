@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+        /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+body {
+  background: #E5E5E5;
+  margin: 60px;
+}
+
+.bacon-blog-post {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.bacon-blog-post-inner { padding: 42px; }
+
+.bacon-blog-post .wp-post-image {
+  width: 100%;
+  height: auto;
+}
+
+.bacon-blog-post h1, .bacon-blog-post h2, .bacon-blog-post h3, .bacon-blog-post h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: 700;
+  line-height: 1.2;
+  font-family: Open Sans, sans-serif;
+}
+
+.bacon-blog-post h1 a, .bacon-blog-post h2 a, .bacon-blog-post h3 a, .bacon-blog-post h4 a {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+}
+
+.bacon-blog-post h1 {
+  margin-top: 0;
+  font-size: 3.157em;
+}
+
+.bacon-blog-post h2 { margin-top: 0; font-size: 2.369em;}
+.bacon-blog-post h3 {font-size: 1.777em;}
+.bacon-blog-post h4 {font-size: 1.333em;}
+.bacon-blog-post small, .bacon-blog-post .font_small {font-size: 0.75em;}
+
+.bacon-blog-post p, .bacon-blog-post p a {
+  font-family: Lora, Times New Roman, serif;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.bacon-blog-post p { margin-bottom: 1.3em; }
+.bacon-blog-post p:last-child { margin-bottom: 0; }
+.bacon-blog-post p a { color: #B21A13; }
+
+.bacon-blog-post blockquote {
+  margin: 1.3em;
+  padding-left: 1.3em;
+  border-left: rgb(224,40,43) solid 0.25em;
+  font-style: italic;
+}
+
+.bacon-shadow:after {
+  position: absolute;
+  content: "";
+  left: 20px;
+  right: 20px;
+  bottom: 0px;
+  z-index: -1;
+  box-shadow: 0 0 30px 4px rgba(0,0,0,0.60);
+}
+.container {
+    background-color: #eef2f5;
+    width: 700px
+}
+.form-control {
+    color: #000
+}
+
+.second {
+    width: 650px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 10px 10px 5px #aaaaaa
+}
+
+.text1 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #56575b
+}
+
+.text2 {
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 6px;
+    color: #56575b
+}
+
+.text3 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-right: 4px;
+    color: #828386
+}
+    </style>
+</head>
+<body>
+    <div style="width: 710px; margin: 0 auto;">
+        <div class="bacon-blog-post bacon-shadow">
+          <img src="https://static2.cbrimages.com/wordpress/wp-content/uploads/2021/03/Jujutsu-Kaisen-Sukuna-smile.jpg?q=50&fit=crop&w=960&h=500&dpr=1.5" class="wp-post-image">
+          <div class="bacon-blog-post-inner">
+            <h2><a href="https://wiki.com/" rel="bookmark" title="Permanent link to Finding What Challenges You" class="title-row">Jujutsu-Kaisen</a></h2>
+            <p>Jujutsu Kaisen is a Japanese manga series written and illustrated by Gege Akutami, serialized in Shueisha's Weekly Shōnen Jump since March 2018. The Jujutsu Kaisen chapters are collected and published by Shueisha, with sixteen tankōbon volumes released as of June 2021<p>
+          </div>
+        </div>
+        <% data.forEach(function(d) { %>
+        <div class="container justify-content-center mt-3 border-left border-right">
+          <div class="d-flex justify-content-center py-2">
+              <div class="second py-2 px-2"> <span class="text1"><%- d.text %></span>
+                  <div class="d-flex justify-content-between py-1 pt-2">
+                      <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpMHRgGhGu9aTtu0Te1mcG91JjK6v24lHbbw&usqp=CAU" width="18">
+                        <span class="text2">
+                          rohith
+                        </span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <%})%>
+        <form action="/comment" method="POST">
+            <div class="form-group mt-5">
+              <textarea class="form-control" rows="5" cols="93" name="comment"></textarea>
+              <button type="submit" class="btn btn-primary mb-5">Post comment</button>
+            </div>
+          </form>
+      </div>
+</body>
+</html>
