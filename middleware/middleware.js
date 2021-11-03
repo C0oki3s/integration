@@ -5,6 +5,10 @@ const dotenv = require("dotenv")
 const { google } = require("googleapis")
 dotenv.config()
 
+const jwt = require("jsonwebtoken");
+const database = require("../models/users");
+
+
 let middleware = {}
 JWT_SECRET = 'b43797b4a91f6a74f8abf356d879b1733cb6b080bf945a7469efefd337d8d41727f1751d4d041df40ec0c1fce8def07e32e4'
 const oauth2client = new google.auth.OAuth2(
