@@ -127,24 +127,36 @@ body {
             <p>Jujutsu Kaisen is a Japanese manga series written and illustrated by Gege Akutami, serialized in Shueisha's Weekly Shōnen Jump since March 2018. The Jujutsu Kaisen chapters are collected and published by Shueisha, with sixteen tankōbon volumes released as of June 2021<p>
           </div>
         </div>
-        <% data.forEach(function(d) { %>
+
+        <%if(data == "data"){%>
         <div class="container justify-content-center mt-3 border-left border-right">
           <div class="d-flex justify-content-center py-2">
-              <div class="second py-2 px-2"> <span class="text1"><%- d.text %></span>
+              <div class="second py-2 px-2"> <span class="text1"></span>
                   <div class="d-flex justify-content-between py-1 pt-2">
-                      <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpMHRgGhGu9aTtu0Te1mcG91JjK6v24lHbbw&usqp=CAU" width="18">
-                        <span class="text2">
-                          rohith
-                        </span>
-                      </div>
                   </div>
               </div>
           </div>
       </div>
-      <%})%>
+      <%}  else { %>
+        <% data.forEach(function(d) { %>
+          <div class="container justify-content-center mt-3 border-left border-right">
+            <div class="d-flex justify-content-center py-2">
+                <div class="second py-2 px-2"> <span class="text1"><%- d.text %></span>
+                    <div class="d-flex justify-content-between py-1 pt-2">
+                        <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpMHRgGhGu9aTtu0Te1mcG91JjK6v24lHbbw&usqp=CAU" width="18">
+                          <span class="text2">
+                            rohith
+                          </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%})}%>
         <form action="/comment" method="POST">
             <div class="form-group mt-5">
               <textarea class="form-control" rows="5" cols="93" name="comment"></textarea>
+              <input type="hidden" name="_csrf" value="<%= csrfToken%>">
               <button type="submit" class="btn btn-primary mb-5">Post comment</button>
             </div>
           </form>

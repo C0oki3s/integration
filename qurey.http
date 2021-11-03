@@ -1,2 +1,7 @@
-GET  http://localhost:5000/dataflow/?id=123/dataflow?id=123
+POST  http://localhost:5000/comment
 Content-Type: application/json
+Cookie: jwt_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvaGl0aCIsImVtYWlsIjoia19yb2hpdGhAd2VhcmVoYWNrZXJvbmUiLCJleHAiOjE2MzU0NDQzODksImlhdCI6MTYzNTQ0MDc4OX0.xNjJd7zj5Kz6-rkbH6Xvlw8vNRpTaqzLeH940eWApgE;
+
+{
+    "comment":"hey"
+}
