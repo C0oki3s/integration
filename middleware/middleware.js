@@ -4,7 +4,6 @@ const database = require("../models/users")
 const dotenv = require("dotenv")
 const { google } = require("googleapis")
 dotenv.config()
-
 const jwt = require("jsonwebtoken");
 const database = require("../models/users");
 
